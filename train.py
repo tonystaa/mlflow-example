@@ -32,6 +32,7 @@ if __name__ == "__main__":
     # wine_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "wine-quality.csv")
 
     training_file_s3 = sys.argv[1]
+    print(training_file_s3)
     data = pd.read_csv(training_file_s3)
     print(data)
 
