@@ -48,8 +48,8 @@ if __name__ == "__main__":
     # alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
     # l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
 
-    alpha_range = np.arange(0, 2, 0.1)
-    l1_ratio_range = np.arange(0, 2, 0.1)
+    alpha_range = np.arange(0, 0.5, 0.1)
+    l1_ratio_range = np.arange(0, 0.2, 0.1)
 
     print(mlflow.get_artifact_uri())
     experiment_id = mlflow.set_experiment("training experiment")
