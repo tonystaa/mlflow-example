@@ -57,6 +57,7 @@ if __name__ == "__main__":
     for alpha in alpha_range:
         for l1_ratio in l1_ratio_range:
             with mlflow.start_run(experiment_id=experiment_id, nested=True):
+                print("mlflow.get_artifact_uri()") 
                 print(mlflow.get_artifact_uri()) 
                 lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
                 lr.fit(train_x, train_y)
