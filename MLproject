@@ -5,6 +5,5 @@ conda_env: conda.yaml
 entry_points:
   main:
     parameters:
-      alpha: float
-      l1_ratio: {type: float, default: 0.1}
-    command: "python train.py {alpha} {l1_ratio}"
+      training_file_s3: string
+    command: "python train.py {training_file_s3}"
